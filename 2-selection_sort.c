@@ -9,7 +9,7 @@ void selection_sort(int *array, size_t size)
 	size_t i = 0, j;
 	size_t lowest, tmp;
 
-	while ( i < size)
+	while (i < size)
 	{
 		lowest = i;
 		j = i + 1;

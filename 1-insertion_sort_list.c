@@ -2,7 +2,7 @@
 /**
  * insertion_sort_list - sorts doubly linked list using
  * the insertion algorithm
- * @list: doubly linked list to be sorted
+ * @list: pointer to first node of doubly linked list to be sorted
  */
 void insertion_sort_list(listint_t **list)
 {
@@ -29,6 +29,7 @@ void insertion_sort_list(listint_t **list)
  * swap - swaps a node with another
  * @n1: one of the odes to be swapped
  * @n2: the node n1 is to be swapped with
+ * @list: pointer to first node of doubly linked list to be sorted
  */
 void swap(listint_t *n1, listint_t *n2, listint_t **list)
 {
