@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdio.h>
 void Swap(int *arr, int a, int b);
 void qsorter(int *arr, int l, int r, size_t size);
 int partition(int *arr, int l, int r, size_t size);
@@ -50,12 +51,20 @@ int partition(int *arr, int l, int r, size_t size)
 	{
 		if (arr[i] <= pivot)
 		{
-			Swap(arr, i, pindex);
+			if (pindex < i)
+			{
+				Swap(arr, i, pindex);
+				print_array(arr, size);
+			}
 			pindex++;
 		}
 	}
-	Swap(arr, pindex, r);
-	print_array(arr, size);
+
+	if (arr[pindex] > pivot)
+	{
+		Swap(arr, pindex, r);
+		print_array(arr, size);
+	}
 	return (pindex);
 }
 /**
