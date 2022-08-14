@@ -6,9 +6,11 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j, check, tmp;
+	size_t j, check, tmp;
 
-	for (i = 0; i < size; i++)
+	if (size < 2 || array == NULL)
+		return;
+	while (1)
 	{
 		check = 0;
 		for (j = 0; j < size - 1; j++)
